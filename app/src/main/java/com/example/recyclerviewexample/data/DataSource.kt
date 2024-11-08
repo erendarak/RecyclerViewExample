@@ -17,18 +17,27 @@ class DataSource(private val context: Context) {
         return context.resources.getStringArray(R.array.driver_championships_array)
     }
 
+    private fun getDriverYearsList(): Array<String> {
+        return context.resources.getStringArray(R.array.driver_years_array)
+    }
+
     fun loadF1Drivers(): List<F1Driver> {
         val namesList = getDriverNamesList()
         val teamsList = getDriverTeamsList()
         val championshipsList = getDriverChampionshipsList()
+        val yearsList = getDriverYearsList()
 
         val drivers = mutableListOf<F1Driver>()
-        for (i in namesList.indices) {
+        val size = minOf(namesList.size, teamsList.size, championshipsList.size, yearsList.size)
+
+        for (i in 0 until size) {
             val name = namesList[i]
             val team = teamsList[i]
             val championships = championshipsList[i].toIntOrNull() ?: 0
+            val yearsString = yearsList[i]
+            val years = yearsString.split(",").mapNotNull { it.trim().toIntOrNull() }
 
-            drivers.add(F1Driver(name, team, championships))
+            drivers.add(F1Driver(name, team, championships, years))
         }
         return drivers
     }

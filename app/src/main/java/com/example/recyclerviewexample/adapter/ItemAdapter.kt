@@ -16,27 +16,23 @@ class ItemAdapter(private val drivers: List<F1Driver>) :
 
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
 
-        private lateinit var driver: F1Driver
-
         val nameTextView: TextView = view.findViewById(R.id.nameTextView)
         val teamTextView: TextView = view.findViewById(R.id.teamTextView)
 
-        init {
+        fun bind(driver: F1Driver) {
+            nameTextView.text = driver.name
+            teamTextView.text = driver.team
+
             view.setOnClickListener {
                 val context = view.context
                 val intent = Intent(context, DetailActivity::class.java).apply {
                     putExtra(DetailActivity.DRIVER_NAME, driver.name)
                     putExtra(DetailActivity.DRIVER_TEAM, driver.team)
                     putExtra(DetailActivity.DRIVER_CHAMPIONSHIPS, driver.championships)
+                    putIntegerArrayListExtra(DetailActivity.DRIVER_YEARS, ArrayList(driver.years))
                 }
                 context.startActivity(intent)
             }
-        }
-
-        fun bind(driver: F1Driver) {
-            this.driver = driver
-            nameTextView.text = driver.name
-            teamTextView.text = driver.team
         }
     }
 

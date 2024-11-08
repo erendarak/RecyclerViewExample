@@ -20,7 +20,7 @@
         <TextView
             android:id="@+id/nameTextView"
             android:layout_width="412dp"
-            android:layout_height="75dp"
+            android:layout_height="97dp"
             android:layout_marginTop="16dp"
             android:text="@{driver.name}"
             android:textSize="24sp"
@@ -32,7 +32,7 @@
         <TextView
             android:id="@+id/teamTextView"
             android:layout_width="409dp"
-            android:layout_height="83dp"
+            android:layout_height="97dp"
             android:layout_marginTop="8dp"
             android:text="@{driver.team}"
             android:textSize="18sp"
@@ -42,14 +42,54 @@
 
         <TextView
             android:id="@+id/championshipsTextView"
-            android:layout_width="413dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="410dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="4dp"
             android:text='@{"Championships: " + driver.championships}'
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/teamTextView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="407dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="272dp"
+            android:layout_marginBottom="399dp"
+            android:gravity="bottom|center_horizontal"
+            android:text="@string/years_raced"
+            android:textColor="#FF0000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ScrollView
+            android:id="@+id/yearsScrollView"
+            android:layout_width="400dp"
+            android:layout_height="315dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="234dp"
+            android:layout_marginBottom="47dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/yearsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textColor="@android:color/black"
+                android:textSize="60sp" />
+        </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
