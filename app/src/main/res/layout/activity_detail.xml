@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout   
+    xmlns:android="http://schemas.android.com/apk/res/android"   
+    xmlns:app="http://schemas.android.com/apk/res-auto"   
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="driver"
+            type="com.example.recyclerviewexample.model.F1Driver" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/design_default_color_secondary_variant"
+        tools:context=".DetailActivity">
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="412dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="16dp"
+            android:text="@{driver.name}"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/teamTextView"
+            android:layout_width="409dp"
+            android:layout_height="83dp"
+            android:layout_marginTop="8dp"
+            android:text="@{driver.team}"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameTextView" />
+
+        <TextView
+            android:id="@+id/championshipsTextView"
+            android:layout_width="413dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:text='@{"Championships: " + driver.championships}'
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/teamTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RecyclerViewExample</string>
+
+    <string-array name="driver_names_array">
+        <item>Lewis Hamilton</item>
+        <item>Michael Schumacher</item>
+        <item>Sebastian Vettel</item>
+        <item>Ayrton Senna</item>
+        <item>Max Verstappen</item>
+        <item>Fernando Alonso</item>
+        <item>Kimi Räikkönen</item>
+        <item>Alain Prost</item>
+        <item>Nelson Piquet</item>
+        <item>Nigel Mansell</item>
+        <item>Jackie Stewart</item>
+        <item>Niki Lauda</item>
+        <item>Jim Clark</item>
+        <item>Emerson Fittipaldi</item>
+        <item>Mika Häkkinen</item>
+        <item>Damon Hill</item>
+        <item>Jenson Button</item>
+        <item>Graham Hill</item>
+        <item>Jochen Rindt</item>
+        <item>Jacques Villeneuve</item>
+    </string-array>
+
+    <string-array name="driver_teams_array">
+        <item>Mercedes</item>
+        <item>Ferrari</item>
+        <item>Red Bull Racing</item>
+        <item>McLaren</item>
+        <item>Red Bull Racing</item>
+        <item>Alpine</item>
+        <item>Alfa Romeo</item>
+        <item>McLaren</item>
+        <item>Brabham</item>
+        <item>Williams</item>
+        <item>Tyrrell</item>
+        <item>Ferrari</item>
+        <item>Lotus</item>
+        <item>Lotus</item>
+        <item>McLaren</item>
+        <item>Williams</item>
+        <item>McLaren</item>
+        <item>Lotus</item>
+        <item>Lotus</item>
+        <item>Williams</item>
+    </string-array>
+
+    <string-array name="driver_championships_array">
+        <item>7</item>
+        <item>7</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+        <item>4</item>
+        <item>3</item>
+        <item>1</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+        <item>1</item>
+        <item>2</item>
+        <item>1</item>
+        <item>1</item>
+    </string-array>
+</resources>
