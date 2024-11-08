@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">RecyclerViewExample</string>
     <string name="years_raced">Years Raced</string>
+    <string name="division">======================================================</string>
 
     <string-array name="driver_names_array">
         <item>Lewis Hamilton</item>
